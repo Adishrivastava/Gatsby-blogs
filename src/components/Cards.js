@@ -7,8 +7,10 @@ function Cards({ img, subHead, Title, styles, path }) {
     <div className="card" style={styles}>
       <Link to={path}>
         <Img fluid={img} />
-        <small>{subHead}</small>
-        <h2>{Title}</h2>
+        <div className="text-here">
+          <small>{subHead}</small>
+          <h2>{Title}</h2>
+        </div>
       </Link>
     </div>
   )
