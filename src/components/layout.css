@@ -1,3 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;0,900;1,800;1,900&display=swap");
+
+:root {
+  --main-bg-color: rgb(26, 29, 36);
+  --main-txt-color: rgb(238, 238, 245);
+  --main-padding: 15px;
+  --main-font: "Poppins", sans-serif;
+}
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -200,7 +209,7 @@ html {
 }
 body {
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: georgia, serif;
+  font-family: var(--main-font);
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -230,12 +239,14 @@ h1 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Futura PT", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 2.25rem;
   line-height: 1.1;
+  font-family: var(--main-font);
 }
 h2 {
   margin-left: 0;
@@ -247,8 +258,7 @@ h2 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1.62671rem;
@@ -264,8 +274,7 @@ h3 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1.38316rem;
@@ -281,8 +290,7 @@ h4 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1rem;
@@ -298,8 +306,7 @@ h5 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 0.85028rem;
@@ -315,8 +322,7 @@ h6 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 0.78405rem;
@@ -619,4 +625,90 @@ pre tt:after {
   html {
     font-size: 100%;
   }
+}
+
+/*
+* extra my own css
+*/
+
+hr {
+  background-color: rgb(135, 135, 135);
+}
+
+a:hover,
+a:active,
+a:focus {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+header {
+  background-color: rgb(21, 22, 24);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+#footer {
+  background-color: var(--main-bg-color);
+  color: white;
+  padding: 20px 0px;
+}
+.social-icons {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20px, 30px));
+  justify-content: center;
+  grid-gap: 1rem;
+}
+i {
+  text-align: center;
+}
+.home-cards-cont {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 1rem;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+.home-cards-cont h1 {
+  text-align: center;
+}
+.card {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  padding: 0px 0px !important;
+  overflow: hidden;
+  background-color: rgb(217, 231, 250);
+  border: none;
+}
+.card:hover {
+  transition: all 0.15s ease-in;
+  transform: scale(1.05);
+  box-shadow: 0px 10px 6px rgb(36, 36, 36);
+}
+
+.card img {
+  width: 100%;
+}
+
+.card h2 {
+  font-weight: bold;
+  color: #282835;
+  padding: 0px 10px;
+}
+.card small {
+  display: block;
+  padding: 10px 20px;
+  margin: 0 auto;
+  font-weight: bold;
+  text-align: center;
 }
